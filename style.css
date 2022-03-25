@@ -16,7 +16,7 @@ body{
     text-align: center;
     overflow: hidden;
 }
-.menuLi{
+.menuLi {
     display: inline;
     
 }
@@ -30,10 +30,39 @@ button {
     background-color: #008DD5;
     border-radius: 10px;
     margin-left: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #F19953;
 }
 #title{
     font-size: 25px;
     margin-top: 10px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 15%;
+    height: 10px;
+    background: #d8e1e9;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.slider:hover {
+    opacity: 1;
+    background-color: #F19953;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #008DD5;
+    cursor: pointer;
+    border-radius: 25px;
 }
 .rwindow{
     width: 1000px;
@@ -42,4 +71,17 @@ button {
     margin: auto;
     margin-top: 30px;
     background-color: rgb(231, 231, 231);
+    overflow: hidden;
+}
+.fieldList{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+.fieldObj{
+    width: 30px;
+    height: 30px;
+    background-color: #0C7C59;
+    margin-top: 1px;
 }

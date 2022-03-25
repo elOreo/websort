@@ -13,12 +13,15 @@ function generateFields() {
     var renderWindowWidth = renderWindow.offsetWidth;
     var renderWindowHeight = renderWindow.offsetHeight;
     
-    var fieldWidths = renderWindowWidth / number;
+    var fieldWidths = renderWindowWidth / number -1;
 
     var fields = []; // add array element mit array.push("element")
     
     for(c = 0; c < number; c++){
-        
+        var field = document.createElement("li");
+        field.className = "fieldObj";
+        fields.push(field);
+        document.getElementById("fieldList").appendChild(field);
     }
     
 }
