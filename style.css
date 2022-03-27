@@ -17,7 +17,7 @@ body{
     overflow: hidden;
 }
 .menuLi {
-    display: inline;
+    display:inline;
     
 }
 button {
@@ -69,7 +69,6 @@ button:hover{
     height: 700px;
     position: relative;
     margin: auto;
-    margin-top: 30px;
     background-color: rgb(231, 231, 231);
     overflow: hidden;
 }
@@ -85,3 +84,22 @@ button:hover{
     background-color: #0C7C59;
     margin-top: 1px;
 }
+a{
+    text-decoration: none;
+}
+h3{
+    color: rgb(39, 39, 39);
+    margin-top: 10px;
+    font-size: 30px;
+}
+.help{
+    text-align: center;
+}
+.helpList{
+    margin-top: 5px;
+}
+.helpList li{
+     color: rgb(39, 39, 39);
+     margin-top: 3px;
+}
+

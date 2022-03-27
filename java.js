@@ -12,10 +12,17 @@ function generateFields() {
     var renderWindow = document.getElementById("renderwindow");
     var renderWindowWidth = renderWindow.offsetWidth;
     var renderWindowHeight = renderWindow.offsetHeight;
-    
+
+    //Check if there is an existing set and delete it.
+    if(document.getElementById("fieldList").children.length > 0){
+      while (document.getElementById("fieldList").firstChild) {
+        document.getElementById("fieldList").removeChild(document.getElementById("fieldList").firstChild);
+      }
+    }
+   
     var fieldWidths = renderWindowWidth / number -1;
 
-    var fields = []; // add array element mit array.push("element")
+    var fields = []; // add array element with array.push("element")
     
     for(c = 0; c < number; c++){
         var field = document.createElement("li");
