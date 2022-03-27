@@ -81,7 +81,7 @@ button:hover{
 .fieldObj{
     width: 30px;
     height: 30px;
-    background-color: #0C7C59;
+    background-color: #008DD5;
     margin-top: 1px;
 }
 a{
@@ -92,14 +92,35 @@ h3{
     margin-top: 10px;
     font-size: 30px;
 }
+h4{
+    color: rgb(39, 39, 39);
+    margin-top: 30px;
+    font-size: 26px;
+}
 .help{
     text-align: center;
+    width: 50%;
+    margin-left: 25%;
 }
 .helpList{
     margin-top: 5px;
+    list-style-type: none;
 }
 .helpList li{
      color: rgb(39, 39, 39);
      margin-top: 3px;
 }
+.helpPara{
+    color: rgb(39, 39, 39);
+    margin-top: 10px;
+}
+.divider{
+    height: 40px;
+    width: 2px;
+    background-color: white;
+    border-radius: 4px;
 
+}
+#disBut{
+    margin-right: 10px;
+}

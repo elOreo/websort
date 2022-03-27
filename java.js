@@ -1,5 +1,6 @@
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
+var fields = [] //Array for all Fields
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -22,7 +23,7 @@ function generateFields() {
    
     var fieldWidths = renderWindowWidth / number -1;
 
-    var fields = []; // add array element with array.push("element")
+    fields = []; // Emptys array
     
     for(c = 0; c < number; c++){
         var field = document.createElement("li");
