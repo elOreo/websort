@@ -67,22 +67,16 @@ button:hover{
 .rwindow{
     width: 1000px;
     height: 700px;
-    position: relative;
+    
     margin: auto;
-    background-color: rgb(231, 231, 231);
-    overflow: hidden;
-}
-.fieldList{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    background-color: #d8e1e9;
     overflow: hidden;
 }
 .fieldObj{
-    width: 30px;
-    height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 1px;
     background-color: #008DD5;
-    margin-top: 1px;
 }
 a{
     text-decoration: none;

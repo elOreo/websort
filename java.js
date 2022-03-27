@@ -15,21 +15,37 @@ function generateFields() {
     var renderWindowHeight = renderWindow.offsetHeight;
 
     //Check if there is an existing set and delete it.
-    if(document.getElementById("fieldList").children.length > 0){
-      while (document.getElementById("fieldList").firstChild) {
-        document.getElementById("fieldList").removeChild(document.getElementById("fieldList").firstChild);
+    if(document.getElementById("renderwindow").children.length > 0){
+      while (document.getElementById("renderwindow").firstChild) {
+        document.getElementById("renderwindow").removeChild(document.getElementById("renderwindow").firstChild);
       }
     }
    
-    var fieldWidths = renderWindowWidth / number -1;
+    var fieldWidths = Math.floor(renderWindowWidth / number -1);
+    var fWidth = String(fieldWidths) + "px";
 
     fields = []; // Emptys array
+    var min = Math.ceil(15);
+    var max = Math.floor(renderWindowHeight -1);
     
+    
+
     for(c = 0; c < number; c++){
-        var field = document.createElement("li");
+        var getRandomHeight = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+        console.log(getRandomHeight);
+        var field = document.createElement("div");
         field.className = "fieldObj";
+        field.id = "f"+c;
+        
+        if(number<21){
+          field.innerHTML = getRandomHeight;
+        }
         fields.push(field);
-        document.getElementById("fieldList").appendChild(field);
+        document.getElementById("renderwindow").appendChild(field);
+        document.getElementById("f"+c).style.width = fWidth;
+        document.getElementById("f"+c).style.height = getRandomHeight + "px";
     }
+
+    
     
 }
