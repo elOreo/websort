@@ -61,6 +61,8 @@ function generateFields() {
     }   
 }
 
+var checked;
+
 function bubbleSort(){
   if(fields.length === 0){
     return;
@@ -68,23 +70,27 @@ function bubbleSort(){
   let len = fields.length;
   let checked;
   do{
-    checked = false;
-    //window.requestAnimationFrame();
-    for (let i= 0; i<len-1; i++){
-      if(fields[i].style.height > fields[i+1].style.height){
-        let tmp = fields[i];
-        fields[i] = fields[i+1];
-        fields[i+1] = tmp;
-        checked = true;
-        clearRenderWindow();
-        for(let j=0; j<len; j++){
+    setInterval(bubbleInside, 400);
+  } while(checked);
+  
+}
+
+function bubbleInside(){
+  let len = fields.length;
+  checked = false;
+  for (let i= 0; i<len-1; i++){
+    if(fields[i].style.height > fields[i+1].style.height){
+      let tmp = fields[i];
+      fields[i] = fields[i+1];
+      fields[i+1] = tmp;
+      checked = true;
+      clearRenderWindow();
+      for(let j=0; j<len; j++){
           
-          document.getElementById("renderwindow").appendChild(fields[j]);
-        }
+        document.getElementById("renderwindow").appendChild(fields[j]);
       }
-      
     }
-  }while(checked);
+  }
 }
 
 function test(){
