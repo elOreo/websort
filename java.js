@@ -51,7 +51,7 @@ function generateFields() {
           field.innerHTML = getRandomHeight;
         }
         else{
-          field.innerHTML = ".";
+          field.innerHTML = "&nbsp;";
         }
         
         fields.push(field);
