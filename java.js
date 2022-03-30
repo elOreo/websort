@@ -2,7 +2,7 @@ var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 var fields = [] //Array for all Fields
 output.innerHTML = slider.value; // Display the default slider value
-
+var interval = setInterval(bubbleInside, 800);
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.innerHTML = this.value;
@@ -25,6 +25,7 @@ function sleep(milliseconds) {
 }
 
 function generateFields() {
+    clearInterval(interval);
     var number = output.innerHTML;
     var renderWindow = document.getElementById("renderwindow");
     var renderWindowWidth = renderWindow.offsetWidth;
@@ -63,15 +64,13 @@ function generateFields() {
 
 var checked;
 
+
 function bubbleSort(){
   if(fields.length === 0){
     return;
   }
   let len = fields.length;
-  let checked;
-  do{
-    setInterval(bubbleInside, 400);
-  } while(checked);
+  interval = setInterval(bubbleInside, 400);
   
 }
 
